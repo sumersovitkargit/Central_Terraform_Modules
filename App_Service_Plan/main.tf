@@ -9,10 +9,7 @@ resource "azurerm_service_plan" "asp" {
   resource_group_name = var.resource_group_name
   os_type             = var.os_type
   #kind              = var.os_type
-  sku {
-    tier = lookup(var.sku, "tier", null)
-    size = var.sku_name
-  }
+  sku_name            = var.sku_name
 
 tags = var.tags
 }
