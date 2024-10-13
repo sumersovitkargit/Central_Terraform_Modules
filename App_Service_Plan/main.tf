@@ -3,7 +3,7 @@ provider "azurerm" {
 }
 
 resource "azurerm_service_plan" "asp" {
-  depends_on = [azurerm_resource_group.rg]
+  #depends_on = [azurerm_resource_group.rg]
   name                = var.name
   location            = var.location
   resource_group_name = var.resource_group_name
