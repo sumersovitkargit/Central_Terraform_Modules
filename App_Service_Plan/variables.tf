@@ -30,15 +30,39 @@ variable "sku" {
 }
 
 # Optional Variables Grouped into a Map
-variable "optional_values" {
-  description = "A map of optional parameters for the App Service Plan."
-  type        = map(any)
-  default = {
-    app_service_environment_id   = null
-    maximum_elastic_worker_count = null
-    worker_count                 = null
-    per_site_scaling_enabled     = null
-    zone_balancing_enabled       = null
-    tags                         = {}
-  }
+variable "tags" {
+  description = "A mapping of tags which should be assigned to the AppService."
+  type        = map(string)
+  default     = {}
+}
+
+variable "worker_count" {
+  description = "The number of Workers (instances) to be allocated."
+  type        = number
+  default     = null
+}
+
+variable "per_site_scaling_enabled" {
+  description = "Should Per Site Scaling be enabled."
+  type        = bool
+  default     = false
+}
+
+variable "zone_balancing_enabled" {
+  description = "Should the Service Plan balance across Availability Zones."
+  type        = bool
+  default     = false
+}
+
+# Define the optional values separately as needed
+variable "app_service_environment_id" {
+  description = "The ID of the App Service Environment to create this Service Plan in."
+  type        = string
+  default     = null
+}
+
+variable "maximum_elastic_worker_count" {
+  description = "The maximum number of workers to use in an Elastic SKU Plan."
+  type        = number
+  default     = null
 }
