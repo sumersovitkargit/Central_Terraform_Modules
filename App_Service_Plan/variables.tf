@@ -24,10 +24,6 @@ variable "sku_name" {
   type        = string
 }
 
-variable "sku" {
-  description = "The SKU tier for the plan."
-  type        = map(string)
-}
 
 # Optional Variables Grouped into a Map
 variable "tags" {
