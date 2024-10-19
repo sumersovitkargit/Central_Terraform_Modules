@@ -6,7 +6,7 @@ resource "azurerm_mssql_server" "sql_server" {
 
 
   azuread_administrator {
-    login                         = var.administrator_login
+    login_username                         = var.administrator_login
     object_id                    = var.administrator_object_id
     azuread_authentication_only   = true
   }
