@@ -29,3 +29,9 @@ variable "app_insights_connection_string" {
   type        = string
 }
 
+variable "app_settings" {
+  description = "A map of key-value pairs of App Settings."
+  type        = map(string)
+  default     = {}
+}
+
