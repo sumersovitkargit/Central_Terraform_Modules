@@ -28,8 +28,7 @@ resource "azurerm_windows_web_app" "webapp" {
   identity                                 = lookup(var.optional_values, "identity", null)
   key_vault_reference_identity_id          = lookup(var.optional_values, "key_vault_reference_identity_id", null)
   logs                                     = lookup(var.optional_values, "logs", null)
-  sticky_settings        
-                    = lookup(var.optional_values, "sticky_settings", null)
+  sticky_settings                          = lookup(var.optional_values, "sticky_settings", null)
   storage_account                          = lookup(var.optional_values, "storage_account", null)
   tags                                     = lookup(var.optional_values, "tags", {})
   virtual_network_subnet_id                = lookup(var.optional_values, "virtual_network_subnet_id", null)
