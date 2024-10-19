@@ -13,11 +13,6 @@ variable "location" {
   type        = string
 }
 
-variable "version" {
-  description = "The version of the SQL Server."
-  type        = string
-  default     = "12.0" # Example: can be changed to other versions as needed
-}
 
 variable "administrator_login" {
   description = "The login for the Azure AD administrator."
