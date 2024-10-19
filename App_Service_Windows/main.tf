@@ -9,7 +9,8 @@ resource "azurerm_windows_web_app" "webapp" {
   service_plan_id     = var.service_plan_id
 
   site_config {
-    # Add specific site configuration options here
+   application_insights_key = var.app_insights_instrumentation_key
+   application_insights_connection_string = var.app_insights_connection_string
   }
 
 }

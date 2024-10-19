@@ -18,3 +18,13 @@ variable "service_plan_id" {
   type        = string
 }
 
+# Application Insights Integration Variables
+variable "app_insights_instrumentation_key" {
+  description = "The instrumentation key for the Application Insights resource."
+  type        = string
+}
+
+variable "app_insights_connection_string" {
+  description = "The connection string for the Application Insights resource."
+  type        = string
+}
