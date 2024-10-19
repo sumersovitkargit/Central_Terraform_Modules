@@ -28,3 +28,4 @@ variable "app_insights_connection_string" {
   description = "The connection string for the Application Insights resource."
   type        = string
 }
+

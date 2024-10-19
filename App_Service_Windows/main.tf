@@ -9,8 +9,13 @@ resource "azurerm_windows_web_app" "webapp" {
   service_plan_id     = var.service_plan_id
 
   site_config {
-   application_insights_key = var.app_insights_instrumentation_key
-   application_insights_connection_string = var.app_insights_connection_string
   }
-
+  
+  app_settings = merge(
+    var.app_settings,
+    {
+      "APPINSIGHTS_INSTRUMENTATIONKEY" = var.app_insights_instrumentation_key
+      "APPLICATIONINSIGHTS_CONNECTION_STRING" = var.app_insights_connection_string
+    }
+  )
 }
